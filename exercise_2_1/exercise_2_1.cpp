@@ -35,6 +35,18 @@ int main() {
   std::cin >> s;
   w = readInVector(s);
 
+  std::cout << "x: {" << x[0];
+  for(int i = 1; i < x.size(); i++) {
+    std::cout << ", " << x[i];
+  }
+  std::cout << "}" << std::endl;
+
+  std::cout << "w: {" << w[0];
+  for(int i = 1; i < w.size(); i++) {
+    std::cout << ", " << w[i];
+  }
+  std::cout << "}" << std::endl;
+
   std::vector<double> y = applyConvolution(x, w, pack_with_zeros);
 
   printVector(y);
